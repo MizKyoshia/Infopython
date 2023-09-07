@@ -113,4 +113,4 @@ def main():
         else:
             print("Bitte gib eine richtige Ziffer ein!")
 
-main()
+main() 
