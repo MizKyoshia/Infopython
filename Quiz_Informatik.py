@@ -32,7 +32,6 @@ Hardware = [
         "antwort": "b"
     }
 ]
-
 Gaming = [
     {
         "frage": """Wie heißt der Protagonist von Red dead Redemption 2?
@@ -85,13 +84,13 @@ def fragenAuswahl(fragenKatalog):
     global score        #"global" dient der Verwendung der "score" Variable außerhalb der Funktion
     frage = random.choice(fragenKatalog)
     print(frage["frage"])       #Aufrufung der Frage aus dem Fragenkatalog (Python-Dictionary)
-    antwort = input("Antwort: ")        #
+    antwort = input("Antwort: ")        
 
     if antwort == frage["antwort"]:
         print("Richtige Antwort!")
         score +=1
     else:
-        print(f"Du liegst leider falsch.Die richtige Antwort wäre '{frage['antwort']}'gewesen!")      #f->als Präfix, damit {} nicht als String ausgegeben werden (Neu ab )
+        print(f"Du liegst leider falsch.Die richtige Antwort wäre '{frage['antwort']}'gewesen!")      #f->als Präfix, damit {} nicht als String ausgegeben werden
 
 #Ranglistenanzeige
 def zeigeRangliste():
@@ -128,6 +127,7 @@ def main():
                     break
             zeigeRangliste()
             score = 0
+
         elif auswahl == "2":
             print("Viel Spaß beim Fragenkatalog zum Gaming!")
             for i in range(5):
@@ -139,6 +139,7 @@ def main():
                     break
             zeigeRangliste()
             score = 0
+
         elif auswahl == "3":
             print("Viel Spaß beim Fragenkatalog zur Musik")
             for i in range(5):
