@@ -131,11 +131,11 @@ def main():
         elif auswahl == "2":
             print("Viel Spaß beim Fragenkatalog zum Gaming!")
             for i in range(5):
-                fragenAuswahl(Gaming)
-            print(f"Das Spiel ist beendet! Dein Punktestand liegt bei {score}")
+                fragenAuswahl(Gaming)           #Ausgabe der Fragen
+            print(f"Das Spiel ist beendet! Dein Punktestand liegt bei {score}")     #Anzeige des scores der aktuell beendeten Spielrunde
             for eintrag in rangliste:
                 if eintrag["name"] == spielername:
-                    eintrag["punkte"] = score
+                    eintrag["punkte"] = score       #Einschreibung des scores in Rangliste als Punkte
                     break
             zeigeRangliste()
             score = 0
@@ -143,11 +143,11 @@ def main():
         elif auswahl == "3":
             print("Viel Spaß beim Fragenkatalog zur Musik")
             for i in range(5):
-                fragenAuswahl(Musik)
-            print(f"Das Spiel ist beendet! Dein Punktestand liegt bei {score}")
+                fragenAuswahl(Musik)            #Ausgabe der Fragen
+            print(f"Das Spiel ist beendet! Dein Punktestand liegt bei {score}")     #Anzeige des scores der aktuell beendeten Spielrunde
             for eintrag in rangliste:
                 if eintrag["name"] == spielername:
-                    eintrag["punkte"] = score
+                    eintrag["punkte"] = score       #Einschreibung des scores in Rangliste als Punkte
                     break
             zeigeRangliste()
             score = 0
@@ -156,7 +156,7 @@ def main():
             print("""Das Spiel wird nun beendet!
                   Vielen Dank fürs Spielen!""")
             zeigeRangliste()
-            break
+            break       #Endgültige Beendigung des Programms
         else:
             print("Bitte gib eine richtige Ziffer ein!")
 
